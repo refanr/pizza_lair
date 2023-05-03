@@ -6,5 +6,4 @@ class OfferConfig(AppConfig):
     name = 'offer'
 
 
-a = 4
-b = 5
+
