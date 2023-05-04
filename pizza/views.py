@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 pizzas = [
-    {'name': 'margherita', 'price': 2400},
-    {'name': 'pepperoni', 'price': 2700}
+    {'name': 'margherita', 'price': 2400, 'toppings': ['sauce', 'cheese']},
+    {'name': 'pepperoni', 'price': 2700, 'toppings': ['sauce', 'cheese', 'pepperoni']}
 ]
 
 # Create your views here.
