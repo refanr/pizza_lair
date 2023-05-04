@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="119c8222-ba47-4ddb-a312-e094b2ba7088" name="Changes" comment="add bootstrap cdn">
-      <change afterPath="$PROJECT_DIR$/static/css/base.css" afterDir="false" />
+    <list default="true" id="119c8222-ba47-4ddb-a312-e094b2ba7088" name="Changes" comment="offer page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pizza_lair/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pizza_lair/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,21 +43,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/refan/VOR/VLN2/pizza_lair/templates/checkout",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/refan/VOR/VLN2/pizza_lair/templates/checkout&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates/checkout" />
@@ -141,21 +137,28 @@
       <option name="project" value="LOCAL" />
       <updated>1683115754792</updated>
     </task>
-    <task id="LOCAL-00005" summary="set up gitignore file">
-      <created>1683189225502</created>
+    <task id="LOCAL-00005" summary="bullet list for authors testing git">
+      <created>1683132362440</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1683189225502</updated>
+      <updated>1683132362440</updated>
     </task>
-    <task id="LOCAL-00006" summary="add bootstrap cdn">
-      <created>1683191594509</created>
+    <task id="LOCAL-00006" summary="offer page">
+      <created>1683218489356</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1683191594509</updated>
+      <updated>1683218489356</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="offer page">
+      <created>1683218769527</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683218769527</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,11 +170,6 @@
         <entry key="Branch">
           <value>
             <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/add_bootstrap" />
-                </option>
-              </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
                   <option value="origin/reynir" />
@@ -213,8 +211,8 @@
     <MESSAGE value="init commit 2" />
     <MESSAGE value="add apps and set up views" />
     <MESSAGE value="set up templates" />
-    <MESSAGE value="set up gitignore file" />
-    <MESSAGE value="add bootstrap cdn" />
-    <option name="LAST_COMMIT_MESSAGE" value="add bootstrap cdn" />
+    <MESSAGE value="bullet list for authors testing git" />
+    <MESSAGE value="offer page" />
+    <option name="LAST_COMMIT_MESSAGE" value="offer page" />
   </component>
 </project>

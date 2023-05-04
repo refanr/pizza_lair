@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'pizza-lair-db',
         'USER': 'pizza-lair-db-user',
         'PASSWORD': 'Steven.Seagal',
-        'HOST': '',
+        'HOST': '34.95.20.28',
         'PORT': '5432'
 
     }
