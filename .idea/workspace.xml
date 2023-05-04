@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="119c8222-ba47-4ddb-a312-e094b2ba7088" name="Changes" comment="add bootstrap cdn">
-      <change afterPath="$PROJECT_DIR$/static/css/base.css" afterDir="false" />
+    <list default="true" id="119c8222-ba47-4ddb-a312-e094b2ba7088" name="Changes" comment="breyta readme">
+      <change afterPath="$PROJECT_DIR$/static/images/img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/img2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/img3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pizza_lair.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pizza_lair.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pizza/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pizza/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pizza_lair/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pizza_lair/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pizza/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pizza/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +64,11 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -70,6 +80,7 @@
       <recent name="$PROJECT_DIR$/checkout" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/images" />
       <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
@@ -83,7 +94,7 @@
         <env name="DJANGO_SETTINGS_MODULE" value="pizza_lair.settings" />
       </envs>
       <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
-      <option name="SDK_NAME" value="Python 3.10 (pizza_lair)" />
+      <option name="SDK_NAME" value="Python 3.9 (pizza_lair) (3)" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -112,6 +123,7 @@
       <workItem from="1683105443200" duration="324000" />
       <workItem from="1683105842588" duration="3898000" />
       <workItem from="1683114924789" duration="1521000" />
+      <workItem from="1683234208066" duration="4659000" />
     </task>
     <task id="LOCAL-00001" summary="init commit 2">
       <created>1683019259298</created>
@@ -169,6 +181,16 @@
             <list>
               <RecentGroup>
                 <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/pizza_layout_init" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
                   <option value="origin/add_bootstrap" />
                 </option>
               </RecentGroup>
@@ -197,7 +219,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/reynir" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>

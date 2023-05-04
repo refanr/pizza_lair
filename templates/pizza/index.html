@@ -1,4 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 <h2>Pizza Menu</h2>
+    {% for pizza in pizzas %}
+        <h4>{{ pizza.name }}</h4>
+        <p>{{ pizza.price }}</p>
+    {% endfor %}
   {% endblock %}
