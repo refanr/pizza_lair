@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="119c8222-ba47-4ddb-a312-e094b2ba7088" name="Changes" comment="bullet list for authors testing git">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="119c8222-ba47-4ddb-a312-e094b2ba7088" name="Changes" comment="offer page">
+      <change beforePath="$PROJECT_DIR$/offer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/offer/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683132362440</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="offer page">
+      <created>1683218489356</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683218489356</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +204,7 @@
     <MESSAGE value="add apps and set up views" />
     <MESSAGE value="set up templates" />
     <MESSAGE value="bullet list for authors testing git" />
-    <option name="LAST_COMMIT_MESSAGE" value="bullet list for authors testing git" />
+    <MESSAGE value="offer page" />
+    <option name="LAST_COMMIT_MESSAGE" value="offer page" />
   </component>
 </project>
