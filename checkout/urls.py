@@ -1,6 +1,9 @@
 from django.urls import path
-from . import views
+from .views import checkout, checkout_history
+
+app_name = 'checkout'
 
 urlpatterns = [
-    path('', views.index, name="index"),
+    path('', checkout, name='checkout'),
+    path('history/', checkout_history, name='checkout_history'),
 ]

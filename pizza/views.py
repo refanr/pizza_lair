@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from pizza.models import Pizza
 
 # Create your views here.
 
+def index(request):
+    return render(request, 'pizza/index.html')
 
 # All pizzas
 def pizza_list(request):

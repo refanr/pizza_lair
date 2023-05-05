@@ -3,6 +3,10 @@ from django.contrib.auth.models import User
 from pizza.models import Pizza
 
 # Create your models here.
+class Pizza(models.Model):
+    name = models.CharField(max_length=200)
+    price = models.FloatField()
+    stock = models.IntegerField()
 class Checkout(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     pizzas = models.ManyToManyField(Pizza)

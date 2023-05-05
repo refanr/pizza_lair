@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# Þurfti að bæta við 'pizza.apps.PizzaConfig' til að fá aðgang að pizza appinu ofv.. fyrir migrate
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pizza.apps.PizzaConfig',
+    'offer.apps.OfferConfig',
+    'checkout.apps.CheckoutConfig',
+    'profile_app.apps.ProfileAppConfig',
 ]
 
 MIDDLEWARE = [
