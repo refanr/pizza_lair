@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'checkout.apps.CheckoutConfig',
+    'offer.apps.OfferConfig',
+    'pizza.apps.PizzaConfig',
+    'profile_app.apps.ProfileAppConfig',
 ]
 
 MIDDLEWARE = [
