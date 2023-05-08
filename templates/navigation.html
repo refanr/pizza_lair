@@ -19,7 +19,11 @@
         </li>
       </ul>
 
-      <a class="btn btn-primary position-absolute bottom-10 end-0" href="{% url 'checkout-index' %}">Cart</a>
+      {% if request.session.cart|default:''|length > 1 %}
+        <a class="btn btn-primary position-absolute bottom-10 end-0" href="{% url 'checkout-index' %}">Cart ({{ request.session.cart|default:''|length }})</a>
+      {% else %}
+        <a class="btn btn-primary position-absolute bottom-10 end-0" href="{% url 'checkout-index' %}">Cart</a>
+      {% endif %}
     </div>
   </div>
 </nav>
