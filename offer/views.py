@@ -1,11 +1,16 @@
 from django.shortcuts import render
+from pizza.models import Pizza
 # from .models import Offer
 
 
 # Create your views here.
 
+# Pizza of the week offer.
+
+#Display pizza with id 1
 def index(request):
-  return render(request, 'offer/index.html')
+  pizza = Pizza.objects.get(name='Margherita')
+  return render(request, 'offer/index.html', {'pizza': pizza})
 # All offers view
 # def all_offers(request):
 #     offers = Offer.objects.all()
