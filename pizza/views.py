@@ -17,6 +17,14 @@ def index(request):#pizza_list(request):
             return redirect('pizza-index')
     return render(request, 'pizza/index.html', {'pizzas': pizzas})
 
+# views.py
+
+def pizza_detail(request, pizza_id):
+    pizza = Pizza.objects.get(id=pizza_id)
+    context = {'pizza': pizza}
+    return render(request, 'pizza/pizza_detail.html', context)
+
+
 
 # Individual pizza object
 # def pizza_detail(request, pk):

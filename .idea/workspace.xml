@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="119c8222-ba47-4ddb-a312-e094b2ba7088" name="Changes" comment="offer page">
+    <list default="true" id="119c8222-ba47-4ddb-a312-e094b2ba7088" name="Changes" comment="detail site running and back button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pizza/pizza_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pizza/pizza_detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
@@ -19,15 +21,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Smá_template_test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,12 +51,18 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/refan/VOR/VLN2/pizza_lair/templates/checkout&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -66,6 +74,7 @@
       <recent name="$PROJECT_DIR$/checkout" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/images" />
       <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
@@ -108,6 +117,7 @@
       <workItem from="1683105443200" duration="324000" />
       <workItem from="1683105842588" duration="3898000" />
       <workItem from="1683114924789" duration="1521000" />
+      <workItem from="1683234208066" duration="4659000" />
     </task>
     <task id="LOCAL-00001" summary="init commit 2">
       <created>1683019259298</created>
@@ -137,28 +147,49 @@
       <option name="project" value="LOCAL" />
       <updated>1683115754792</updated>
     </task>
-    <task id="LOCAL-00005" summary="bullet list for authors testing git">
-      <created>1683132362440</created>
+    <task id="LOCAL-00005" summary="set up gitignore file">
+      <created>1683189225502</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1683132362440</updated>
+      <updated>1683189225502</updated>
     </task>
-    <task id="LOCAL-00006" summary="offer page">
-      <created>1683218489356</created>
+    <task id="LOCAL-00006" summary="add bootstrap cdn">
+      <created>1683191594509</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1683218489356</updated>
+      <updated>1683191594509</updated>
     </task>
-    <task id="LOCAL-00007" summary="offer page">
-      <created>1683218769527</created>
+    <task id="LOCAL-00007" summary="detail site running">
+      <created>1683581602094</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1683218769527</updated>
+      <updated>1683581602094</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="detail site running">
+      <created>1683582575882</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683582575882</updated>
+    </task>
+    <task id="LOCAL-00009" summary="detail site running">
+      <created>1683582898890</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683582898890</updated>
+    </task>
+    <task id="LOCAL-00010" summary="detail site running and back button">
+      <created>1683586463814</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683586463814</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +201,21 @@
         <entry key="Branch">
           <value>
             <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/pizza_layout_init" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/add_bootstrap" />
+                </option>
+              </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
                   <option value="origin/reynir" />
@@ -195,7 +241,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/reynir" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -211,8 +257,10 @@
     <MESSAGE value="init commit 2" />
     <MESSAGE value="add apps and set up views" />
     <MESSAGE value="set up templates" />
-    <MESSAGE value="bullet list for authors testing git" />
-    <MESSAGE value="offer page" />
-    <option name="LAST_COMMIT_MESSAGE" value="offer page" />
+    <MESSAGE value="set up gitignore file" />
+    <MESSAGE value="add bootstrap cdn" />
+    <MESSAGE value="detail site running" />
+    <MESSAGE value="detail site running and back button" />
+    <option name="LAST_COMMIT_MESSAGE" value="detail site running and back button" />
   </component>
 </project>
