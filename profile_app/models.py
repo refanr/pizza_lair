@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 # Ef ég skil þetta rétt þá er þetta user profiles ?

@@ -1,4 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
 <h2>Checkout</h2>
-  {% endblock %}
+<div class="pizza">
+    {% for pizza in pizzas %}
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ pizza.name }} - {{ pizza.price }},- kr</h5>
+            <p class="card-text">
+              {% for topping in pizza.toppings.all %}
+                <i>{{ topping }},</i>
+              {% endfor %}
+            </p>
+          </div>
+        </div>
+    {% endfor %}
+
+    <div class="card"><b>Samtals: </b> {{total_price}},- kr</div>
+</div>
+{% endblock %}
