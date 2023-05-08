@@ -3,7 +3,7 @@
 <div class="card" style="width: 18rem;">
   <img src="{% static 'images/' %}{{ pizza.id }}.png" class="card-img-top" alt="{{ pizza.name }}">
   <div class="card-body">
-    <a href="#">{{ pizza.name }}</a>
+    <a href="pizzas/{{ pizza.id }}">{{ pizza.name }}</a>
     <p>{{ pizza.price }},- kr</p>
     <div class="topping">
     {% for topping in pizza.toppings.all %}
