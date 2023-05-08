@@ -1,4 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
+
 <h2>Pizza Menu</h2>
+
+<div class="pizza">
+    {% for pizza in pizzas %}
+        {% include 'pizza/pizza_list_item.html' with pizza=pizza %}
+    {% endfor %}
+</div>
   {% endblock %}
