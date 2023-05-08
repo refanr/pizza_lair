@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-<!-- pizza_detail.html -->
+{% load static %}
 
 <h1>{{ pizza.name }}</h1>
+<h1>{{ pizza.id }}</h1>
+    <div class="topping">
+    {% for topping in pizza.toppings.all %}
+        {{ topping }}
+    {% endfor %}
+    </div>
+<img src="{% static 'images/' %}{{ pizza.id }}.png" class="card-img-top" alt="{{ pizza.name }}">
 
 
-
-</body>
-</html>
