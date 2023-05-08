@@ -15,9 +15,11 @@
         <!-- Viljum við hafa back takka? Kom fram í prufunum. Kannski óþarfi en ég set þetta temp hér getum síðan notað
               eitthvað png af ör eða álíka ef við viljum hafa svona takka. -->
         <li class="nav-item">
-          <a class="nav-link" href="#" onclick="window.history.back();" style="text-decoration: underline; padding-left: 25px;">Back</a>
+          <a class="nav-link" href="#" onclick="window.history.back();" style="text-decoration: none; padding-left: 25px; font-size: 20px">&#8592;</a>
         </li>
       </ul>
+
+      <a class="btn btn-primary position-absolute bottom-10 end-0" href="{% url 'checkout-index' %}">Cart</a>
     </div>
   </div>
 </nav>

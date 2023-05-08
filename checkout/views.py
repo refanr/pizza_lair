@@ -1,11 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from pizza.models import Pizza
 # from checkout.models import Checkout
 # from checkout.forms import CheckoutForm
 
 # Checkout views..
 
 def index(request):
-  return render(request, 'checkout/index.html')
+  cart = request.session.get('cart', [])
+  pizzas = Pizza.objects.filter(name__in=cart)
+  total_price = sum(pizza.price for pizza in pizzas)
+  return render(request, 'checkout/index.html', {'pizzas': pizzas, 'total_price': total_price})
 
 #checkout history view
 # def checkout_history(request):

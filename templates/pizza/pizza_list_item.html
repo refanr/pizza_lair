@@ -4,11 +4,20 @@
   <img src="{% static 'images/' %}{{ pizza.id }}.png" class="card-img-top" alt="{{ pizza.name }}">
   <div class="card-body">
     <a href="#">{{ pizza.name }}</a>
-    <p>{{ pizza.price }}</p>
+    <p>{{ pizza.price }},- kr</p>
     <div class="topping">
     {% for topping in pizza.toppings.all %}
-        <div>{{ topping }}</div>
+        {{ topping }},
     {% endfor %}
+    </div>
+
+    <div class="add-cart">
+      <form method="post">
+        {% csrf_token %}
+        <input type="hidden" id="pizzaName" name="pizzaName" value="{{ pizza.name }}" />
+        <input type="submit" class="btn btn-success position-absolute bottom-0 end-0" value="+" />
+      </form>
+<!--      <a class="btn btn-success position-absolute bottom-0 end-0" href="">+</a>-->
     </div>
   </div>
 </div>
