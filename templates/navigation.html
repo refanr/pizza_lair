@@ -20,9 +20,9 @@
       </ul>
 
       {% if request.session.cart|default:''|length > 1 %}
-        <a class="btn btn-primary position-absolute bottom-10 end-0" href="{% url 'checkout-index' %}">Cart ({{ request.session.cart|default:''|length }})</a>
+        <a class="btn btn-primary position-absolute bottom-10 end-0" href="{% url 'checkout-index' %}"><i class="bi bi-cart"> Cart ({{ request.session.cart|default:''|length }})</i></a>
       {% else %}
-        <a class="btn btn-primary position-absolute bottom-10 end-0" href="{% url 'checkout-index' %}">Cart</a>
+        <a class="btn btn-primary position-absolute bottom-10 end-0" href="{% url 'checkout-index' %}"><i class="bi bi-cart"> Cart</i></a>
       {% endif %}
     </div>
   </div>

@@ -15,7 +15,7 @@
       <form method="post">
         {% csrf_token %}
         <input type="hidden" id="pizzaName" name="pizzaName" value="{{ pizza.name }}" />
-        <input type="submit" class="btn btn-success position-absolute bottom-0 end-0" value="+" />
+        <button type="submit" class="btn btn-success position-absolute bottom-0 end-0"><i class="bi bi-cart"></i></button>
       </form>
 <!--      <a class="btn btn-success position-absolute bottom-0 end-0" href="">+</a>-->
     </div>
