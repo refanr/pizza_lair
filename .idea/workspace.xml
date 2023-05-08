@@ -7,6 +7,7 @@
     <list default="true" id="119c8222-ba47-4ddb-a312-e094b2ba7088" name="Changes" comment="detail site running">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pizza/pizza_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pizza/pizza_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pizza/pizza_list_item.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pizza/pizza_list_item.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +169,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683581602094</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="detail site running">
+      <created>1683582575882</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683582575882</updated>
+    </task>
+    <task id="LOCAL-00009" summary="detail site running">
+      <created>1683582898890</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683582898890</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
