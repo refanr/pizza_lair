@@ -5,4 +5,29 @@ body {
 }
 .container {
     background-color: rgba(255,255,255,0.3);
+    padding: 10px;
+}
+
+.pizza {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: center;
+    justify-content: center;
+}
+.card {
+    min-width: 200px;
+    margin: 10px;
+}
+
+.card-body a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.topping {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
 }
