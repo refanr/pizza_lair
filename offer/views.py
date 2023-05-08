@@ -10,7 +10,8 @@ from pizza.models import Pizza
 #Pizza vikunar eeeeeeer MARGHARITA (erum að spara álegg)
 def index(request):
   pizza = Pizza.objects.get(name='Margherita')
-  return render(request, 'offer/index.html', {'pizza': pizza})
+  discounted_price = pizza.price * 0.5
+  return render(request, 'offer/index.html', {'pizza': pizza, 'discounted_price': discounted_price})
 # All offers view
 # def all_offers(request):
 #     offers = Offer.objects.all()

@@ -1,7 +1,23 @@
 {% extends 'base.html' %}
-{% load static %}
-{% block content %}
 
-<h2>Special Offers</h2>
-<h3>Hello offer site</h3>
-  {% endblock %}
+{% block content %}
+<div class="container" id="offer-box">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h1 class="text-center">Offer of the day!</h1>
+      <h2 class="text-center">{{ pizza.name }}</h2>
+      <h3 class="text-center">{{ discounted_price}} kr</h3>
+      <h4 class="text-center">50% off!</h4>
+    </div>
+  </div>
+</div>
+
+<script>
+  const offerBox = document.getElementById('offer-box');
+  offerBox.addEventListener('click', function() {
+  // Setja kóða hér með sem bætir í körfu eða ehv sniðugt. Set temp msg á meðan.
+    alert('Thank you for your interest in our offer!');
+  });
+</script>
+{% endblock %}
+
