@@ -1,7 +1,7 @@
 {% load static %}
 
 <h1>{{ pizza.name }}</h1>
-<h1>{{ pizza.id }}</h1>
+<h1>{{ pizza.price }}</h1>
     <div class="topping">
     {% for topping in pizza.toppings.all %}
         {{ topping }}
