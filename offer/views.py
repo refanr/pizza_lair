@@ -7,7 +7,7 @@ from pizza.models import Pizza
 
 # Pizza of the week offer.
 
-#Display pizza with id 1
+#Pizza vikunar eeeeeeer MARGHARITA (erum að spara álegg)
 def index(request):
   pizza = Pizza.objects.get(name='Margherita')
   return render(request, 'offer/index.html', {'pizza': pizza})
