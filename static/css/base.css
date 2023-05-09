@@ -31,20 +31,3 @@ body {
     gap: 7px;
     flex-wrap: wrap;
 }
-
-.landing-page {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.button-group {
-    padding: 20px 70px;
-    border-radius: 10px;
-    background-color: #E3D3876E;
-}
-
-.button-group a {
-    font-size: 1.5em;
-
-}
