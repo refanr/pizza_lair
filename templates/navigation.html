@@ -1,7 +1,6 @@
-{% load static %}
-<nav class="navbar navbar-expand-lg" style="background-color: #E3D387AE; font-weight: bolder; font-size: 1.2em">
+<nav class="navbar navbar-expand-lg" style="background-color: #E3D387AE; font-weight: bolder">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'pizza-index' %}"><img src="{% static 'images/logo.png' %}" style="max-height: 60px"></a>
+    <a class="navbar-brand" href="{% url 'pizza-index' %}">Pizza Lair</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,13 +19,11 @@
         </li>
       </ul>
 
-
       {% if request.session.cart|default:''|length > 1 %}
         <a class="btn btn-primary position-absolute bottom-10 end-0" href="{% url 'checkout-index' %}"><i class="bi bi-cart"> Cart ({{ request.session.cart|default:''|length }})</i></a>
       {% else %}
         <a class="btn btn-primary position-absolute bottom-10 end-0" href="{% url 'checkout-index' %}"><i class="bi bi-cart"> Cart</i></a>
       {% endif %}
-
     </div>
   </div>
 </nav>

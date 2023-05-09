@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'offer.apps.OfferConfig',
     'pizza.apps.PizzaConfig',
     'profile_app.apps.ProfileAppConfig',
-    'landing.apps.LandingConfig',
 ]
 
 MIDDLEWARE = [
