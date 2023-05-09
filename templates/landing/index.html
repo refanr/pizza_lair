@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="landing-page">
+    <img src="{% static 'images/logo.png' %}" style="max-width: 600px">
+    <div class="button-group">
+        <a class="btn btn-outline-success" href="{% url 'pizza-index' %}">Pizza Menu</a>
+        <a class="btn btn-outline-success" href="{% url 'offer-index' %}">Special Offers</a>
+    </div>
+</div>
+
+
+  {% endblock %}
