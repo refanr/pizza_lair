@@ -1,16 +1,39 @@
+{% extends 'base.html' %}
 {% load static %}
+{% block content %}
 
-<label>
+
+    <div class="card-transparent mb-3" style="max-width: 640px;">
+  <div class="row g-3">
+  <div class="col-md-1">
+      <label>
 <a class="nav-link" href="#" onclick="window.history.back();" style="text-decoration: none; padding-left: 25px; font-size: 20px">&#8592;</a>
-    Back
 </label>
-<h1>{{ pizza.name }}</h1>
-<h1>{{ pizza.price }}</h1>
-    <div class="topping">
+  </div>
+    <div class="col-md-6">
+      <img src="{% static 'images/' %}{{ pizza.id }}.png" class="img-fluid rounded-start" alt="{{ pizza.name }}">
+    </div>
+    <div class="col-md-5">
+      <div class="card-body">
+        <h3 class="card-title">{{ pizza.name }}</h3>
+        <div class="topping">
     {% for topping in pizza.toppings.all %}
+        <h5>
         {{ topping }}
+        </h5>
     {% endfor %}
     </div>
-<img src="{% static 'images/' %}{{ pizza.id }}.png" class="card-img-top" alt="{{ pizza.name }}">
+        <h5 class="card-text">{{ pizza.price }}</h5>
 
+      <form method="post">
+        {% csrf_token %}
+        <input type="hidden" id="pizzaName" name="pizzaName" value="{{ pizza.name }}" />
+        <button type="submit" class="btn btn-success" style="font-size: 1.2em"><i class="bi bi-cart"> Add to Cart</i></button>
+      </form>
+<!--      <a class="btn btn-success position-absolute bottom-0 end-0" href="">+</a>-->
 
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
