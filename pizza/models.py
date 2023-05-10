@@ -15,6 +15,7 @@ class Pizza(models.Model):
     price = models.IntegerField()
     toppings = models.ManyToManyField(Topping)
     image = models.ImageField(upload_to='images', blank=True)
+    description = models.TextField(blank=True)
 
     def __str__(self):
         return self.name
