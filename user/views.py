@@ -22,9 +22,9 @@ def profile(request):
   if request.method == 'POST':
     form = ProfileForm(instance=profile, data=request.POST)
     if form.is_valid():
-      profil = form.save(commit=False)
-      profil.user = request.user
-      profil.save()
+      profile = form.save(commit=False)
+      profile.user = request.user
+      profile.save()
       return redirect('profile')
   return render(request, 'user/profile.html', {
     'form': ProfileForm(instance=profile)

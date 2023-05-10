@@ -1,3 +1,4 @@
+
 {% extends 'base.html' %}
 {% block content %}
 
@@ -6,5 +7,6 @@
         {{ form }}
         <input type="submit" class="btn btn-primary" value="Update" />
     </form>
+    <img src="{{ user.profile.profile_image }}" style="max-width: 300px"/>
 
 {% endblock %}
