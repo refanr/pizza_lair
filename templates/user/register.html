@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h1>Sign up now!</h1>
+
+
+    <form class="form form-horizontal" method="post">
+        {% csrf_token %}
+        <div>
+            <div class="row">
+                <div class="col">
+                    <p>Username:</p>
+                </div>
+                <div class="col-10">
+                    {{ form.username }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>
+                    First name:
+                    </p>
+                </div>
+                <div class="col-10">
+                    {{ form.first_name }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>
+                    Last name:
+                    </p>
+                </div>
+                <div class="col-10">
+                    {{ form.last_name }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>
+                    Password:
+                    </p>
+                </div>
+                <div class="col-10">
+                    {{ form.password1 }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>
+                    Confirm Password:
+                    </p>
+                </div>
+                <div class="col-10">
+                    {{ form.password2 }}
+                </div>
+            </div>
+        </div>
+
+
+
+        <input type="submit" class="btn btn-primary" value="Sign up" />
+    </form>
+
+{% endblock %}
