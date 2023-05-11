@@ -6,13 +6,59 @@
 
     <form class="form form-horizontal" method="post">
         {% csrf_token %}
-        <ul class="register">
-            <li id="username" class="register-cls">{{ form.username }}</li>
-            <li id="first_name" class="register-cls" >{{ form.first_name }}</li>
-            <li id="last_name" class="register-cls">{{ form.last_name }}</li>
-            <li id="password1" class="register-cls">{{ form.password1 }}</li>
-            <li id="password2" class="register-cls">{{ form.password2 }}</li>
-        </ul>
+        <div>
+            <div class="row">
+                <div class="col">
+                    <p>Username:</p>
+                </div>
+                <div class="col-10">
+                    {{ form.username }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>
+                    First name:
+                    </p>
+                </div>
+                <div class="col-10">
+                    {{ form.first_name }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>
+                    Last name:
+                    </p>
+                </div>
+                <div class="col-10">
+                    {{ form.last_name }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>
+                    Password:
+                    </p>
+                </div>
+                <div class="col-10">
+                    {{ form.password1 }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>
+                    Confirm Password:
+                    </p>
+                </div>
+                <div class="col-10">
+                    {{ form.password2 }}
+                </div>
+            </div>
+        </div>
+
+
+
         <input type="submit" class="btn btn-primary" value="Sign up" />
     </form>
 
