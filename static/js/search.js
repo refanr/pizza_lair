@@ -1,20 +1,14 @@
-const searchBar = document.getElementById("search-bar");
-const pizzaList = document.querySelector(".pizza");
+  const searchInput = document.getElementById('searchInput');
+  const cards = document.getElementsByClassName('card');
 
-searchBar.addEventListener("keyup", (event) => {
-  const searchText = event.target.value.trim();
-
-  if (searchText.length > 0) {
-    fetch(`/pizza/search/${searchText}`)
-      .then((response) => response.text())
-      .then((html) => {
-        pizzaList.innerHTML = html;
-      });
-  } else {
-    fetch("/pizza/")
-      .then((response) => response.text())
-      .then((html) => {
-        pizzaList.innerHTML = html;
-      });
-  }
-});
+  searchInput.addEventListener('keyup', () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    for (const card of cards) {
+      const pizzaName = card.querySelector('.card-body a').textContent.toLowerCase();
+      if (pizzaName.includes(searchTerm)) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    }
+  });
