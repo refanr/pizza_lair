@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
+{% load custom_filters %}
+{% load static %}
+
 {% block content %}
 <h2>Checkout</h2>
 <div class="pizza">
@@ -11,10 +14,17 @@
                 <i>{{ topping }},</i>
               {% endfor %}
             </p>
+            <p class="card-text quantity" data-pizza-id="{{ pizza.id }}">Quantity: x {{ pizza_counts|get_pizza_count:pizza.name }}</p>
+            <button class="add-pizza" data-pizza-id="{{ pizza.id }}" data-pizza-price="{{ pizza.price }}">+</button>
+            <button class="remove-pizza" data-pizza-id="{{ pizza.id }}" data-pizza-price="{{ pizza.price }}">-</button>
           </div>
         </div>
     {% endfor %}
 
-    <div class="card"><b>Samtals: </b> {{total_price}},- kr</div>
+    <div class="card"><b>Samtals: </b> <span id="total-price">{{total_price}}</span>,- kr</div>
 </div>
+
+{% block extra_js %}
+    <script src="{% static 'js/checkout.js' %}"></script>
+{% endblock %}
 {% endblock %}

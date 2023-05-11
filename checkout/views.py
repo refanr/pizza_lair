@@ -2,23 +2,49 @@ from django.shortcuts import render, redirect
 from pizza.models import Pizza
 # from checkout.models import Checkout
 # from checkout.forms import CheckoutForm
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+
+# ...
+
+@csrf_exempt  # This is needed to allow POST requests
+def add_pizza(request, pizza_id):
+    cart = request.session.get('cart', [])
+    pizza = Pizza.objects.get(id=pizza_id)
+    cart.append(pizza.name)
+    request.session['cart'] = cart
+    return JsonResponse({'status': 'ok'})
+
+@csrf_exempt  # This is needed to allow POST requests
+def remove_pizza(request, pizza_id):
+    cart = request.session.get('cart', [])
+    pizza = Pizza.objects.get(id=pizza_id)
+    if pizza.name in cart:
+        cart.remove(pizza.name)
+        request.session['cart'] = cart
+    return JsonResponse({'status': 'ok'})
 
 # Checkout views..
-
 def index(request):
   cart = request.session.get('cart', [])
-  pizzas = Pizza.objects.filter(name__in=cart)
+  pizza_names = list(set(cart))
+  pizzas = Pizza.objects.filter(name__in=pizza_names)
   total_price = 0
+  pizza_counts = {}  # Dictionary to store the quantity of each pizza
 
   for pizza in pizzas:
+    quantity = cart.count(pizza.name)
     if pizza.name == 'Margherita':
-      pizza.price = pizza.price * 0.5
-      total_price += pizza.price
-    else:
-        total_price += pizza.price
+      pizza.price *= 0.5
+    total_price += pizza.price * quantity
+    pizza_counts[pizza.name] = quantity  # Add pizza name and quantity to dictionary
 
-  #total_price = sum(pizza.price for pizza in pizzas)
-  return render(request, 'checkout/index.html', {'pizzas': pizzas, 'total_price': total_price})
+  context = {
+    'pizzas': pizzas,
+    'total_price': total_price,
+    'pizza_counts': pizza_counts  # Include 'pizza_counts' in the context
+  }
+  return render(request, 'checkout/index.html', context)
 
 #checkout history view
 # def checkout_history(request):

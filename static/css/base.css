@@ -8,6 +8,10 @@ body {
     padding: 10px;
 }
 
+.container2 {
+    background-color: rgba(1,1,1,0);
+}
+
 .pizza {
     display: flex;
     flex-wrap: wrap;
@@ -57,3 +61,14 @@ body {
     width: 600px;
     color: black;
 }
+
+.register {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.register li {
+    list-style: none;
+}
+
