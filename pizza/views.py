@@ -6,7 +6,7 @@ from pizza.models import Pizza
 
 # All pizzas
 def index(request):#pizza_list(request):
-    pizzas = Pizza.objects.all()
+    pizzas = Pizza.objects.all().order_by('name')
     if request.method == "POST":
         data = request.POST
         action = data.get("pizzaName")
