@@ -4,6 +4,8 @@ from pizza.models import Pizza
 # from checkout.forms import CheckoutForm
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+import datetime
+from .forms import PaymentForm
 
 # ...
 
@@ -45,6 +47,29 @@ def index(request):
     'pizza_counts': pizza_counts  # Include 'pizza_counts' in the context
   }
   return render(request, 'checkout/index.html', context)
+
+def payment_options(request):
+    cart = request.session.get('cart', [])
+    pizza_names = list(set(cart))
+    pizzas = Pizza.objects.filter(name__in=pizza_names)
+    total_price = 0
+
+    for pizza in pizzas:
+        quantity = cart.count(pizza.name)
+        if pizza.name == 'Margherita':
+            pizza.price *= 0.5
+        total_price += pizza.price * quantity
+
+    return render(request, 'checkout/payment_options.html', {'total_price': total_price})
+
+def get_pizza(request):
+    pickup_time = datetime.datetime.now() + datetime.timedelta(minutes=15)
+    return render(request, 'checkout/get_pizza.html', {'pickup_time': pickup_time})
+
+
+def info_form(request):
+    form = PaymentForm()
+    return render(request, 'checkout/info_form.html', {'form': form})
 
 #checkout history view
 # def checkout_history(request):

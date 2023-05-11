@@ -24,6 +24,11 @@
     <div class="card"><b>Samtals: </b> <span id="total-price">{{total_price}}</span>,- kr</div>
 </div>
 
+    <!-- Order Now Button -->
+    <div class="d-flex justify-content-center mt-5">
+        <a href="{% url 'payment_options' %}" class="btn btn-primary">Order Now</a>
+    </div>
+
 {% block extra_js %}
     <script src="{% static 'js/checkout.js' %}"></script>
 {% endblock %}
