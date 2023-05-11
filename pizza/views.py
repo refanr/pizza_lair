@@ -25,7 +25,6 @@ def pizza_detail(request, pizza_id):
     return render(request, 'pizza/pizza_detail.html', context)
 
 
-
 # Individual pizza object
 # def pizza_detail(request, pk):
 #     pizza = get_object_or_404(Pizza, pk=pk)
