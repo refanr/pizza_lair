@@ -4,20 +4,26 @@ from pizza.models import Pizza
 # from checkout.forms import CheckoutForm
 
 # Checkout views..
-
 def index(request):
   cart = request.session.get('cart', [])
-  pizza_names = list(set(cart))  # Get unique pizza names from the cart
+  pizza_names = list(set(cart))
   pizzas = Pizza.objects.filter(name__in=pizza_names)
   total_price = 0
+  pizza_counts = {}  # Dictionary to store the quantity of each pizza
 
   for pizza in pizzas:
-    quantity = cart.count(pizza.name)  # Get the quantity of the pizza from the cart
+    quantity = cart.count(pizza.name)
     if pizza.name == 'Margherita':
-      pizza.price *= 0.5  # Apply discount to Margherita pizza
-    total_price += pizza.price * quantity  # Multiply price by quantity
+      pizza.price *= 0.5
+    total_price += pizza.price * quantity
+    pizza_counts[pizza.name] = quantity  # Add pizza name and quantity to dictionary
 
-  return render(request, 'checkout/index.html', {'pizzas': pizzas, 'total_price': total_price})
+  context = {
+    'pizzas': pizzas,
+    'total_price': total_price,
+    'pizza_counts': pizza_counts  # Include 'pizza_counts' in the context
+  }
+  return render(request, 'checkout/index.html', context)
 
 #checkout history view
 # def checkout_history(request):

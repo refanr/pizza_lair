@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load custom_filters %}
 {% block content %}
 <h2>Checkout</h2>
 <div class="pizza">
@@ -11,6 +12,7 @@
                 <i>{{ topping }},</i>
               {% endfor %}
             </p>
+            <p class="card-text">Quantity: x {{ pizza_counts|get_pizza_count:pizza.name }}</p>
           </div>
         </div>
     {% endfor %}
