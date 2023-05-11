@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from pizza.models import Pizza
 
@@ -6,7 +7,17 @@ from pizza.models import Pizza
 
 # All pizzas
 def index(request):#pizza_list(request):
-    pizzas = Pizza.objects.all().order_by('name')
+
+    if 'search_filter' in request.GET:
+      search_filter = request.GET['search_filter']
+      pizzas = [{
+          'id':  x.id,
+          'name': x.name,
+          'description': x.description,
+          'price': x.price,
+          'toppings': x.toppings.order_by('name')
+      } for x in Pizza.objects.filter(name__icontains=search_filter) ]
+      return JsonResponse({'data':pizzas})
     if request.method == "POST":
         data = request.POST
         action = data.get("pizzaName")
@@ -15,6 +26,7 @@ def index(request):#pizza_list(request):
             cart.append(action)
             request.session['cart'] = cart
             return redirect('pizza-index')
+    pizzas = Pizza.objects.all().order_by('name')
     return render(request, 'pizza/index.html', {'pizzas': pizzas})
 
 # views.py
