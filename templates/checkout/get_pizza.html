@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2 class="text-center mt-5">Pizzan þín verður tilbúin kl: {{ pickup_time|time:"H:i" }} at Dúfnahólar 10</h2>
+  <div class="text-center mt-5">
+    <h2>Your Pizza will be ready at: {{ pickup_time|time:"H:i" }}</h2>
+    <h3>Pickup at: Pizza Lair Dúfnahólar 10</h3>
+  </div>
 {% endblock %}
+
