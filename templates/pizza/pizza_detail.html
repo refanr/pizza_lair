@@ -24,7 +24,8 @@
     {% endfor %}
     </div>
         <h5 class="card-text">{{ pizza.price }}</h5>
-      <p class="card-text">{{ pizza.description }}</p>
+      <p class="card-text" id="description">{{ pizza.description }}</p>
+
 
       <form method="post">
         {% csrf_token %}
