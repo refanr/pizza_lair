@@ -2,6 +2,27 @@ from django.shortcuts import render, redirect
 from pizza.models import Pizza
 # from checkout.models import Checkout
 # from checkout.forms import CheckoutForm
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+
+# ...
+
+@csrf_exempt  # This is needed to allow POST requests
+def add_pizza(request, pizza_id):
+    cart = request.session.get('cart', [])
+    pizza = Pizza.objects.get(id=pizza_id)
+    cart.append(pizza.name)
+    request.session['cart'] = cart
+    return JsonResponse({'status': 'ok'})
+
+@csrf_exempt  # This is needed to allow POST requests
+def remove_pizza(request, pizza_id):
+    cart = request.session.get('cart', [])
+    pizza = Pizza.objects.get(id=pizza_id)
+    if pizza.name in cart:
+        cart.remove(pizza.name)
+        request.session['cart'] = cart
+    return JsonResponse({'status': 'ok'})
 
 # Checkout views..
 def index(request):
