@@ -7,7 +7,7 @@
     <list default="true" id="119c8222-ba47-4ddb-a312-e094b2ba7088" name="Changes" comment="detail site running and back button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pizza/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pizza/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pizza/pizza_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pizza/pizza_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pizza/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pizza/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Smá_template_test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
