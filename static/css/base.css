@@ -53,6 +53,15 @@ body {
 
 }
 
+#description {
+    padding: 10px;
+    text-align: justify;
+    background-color: beige;
+    border-radius: 10px;
+    width: 600px;
+    color: black;
+}
+
 .register {
     display: flex;
     flex-direction: column;
