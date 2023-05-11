@@ -1,6 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 
+from user.forms.custom_user_creation_form import CustomUserCreationForm
 from user.forms.profile_form import ProfileForm
 from user.models import Profile
 
@@ -9,12 +10,13 @@ from user.models import Profile
 
 def register(request):
   if request.method == 'POST':
-    form = UserCreationForm(data=request.POST)
+    form = CustomUserCreationForm(data=request.POST)
+
     if form.is_valid():
       form.save()
       return redirect('login')
   return render(request, 'user/register.html', {
-    'form': UserCreationForm()
+    'form': CustomUserCreationForm()
   })
 
 def profile(request):
