@@ -6,7 +6,12 @@ from pizza.models import Pizza
 
 # All pizzas
 def index(request):#pizza_list(request):
-    pizzas = Pizza.objects.all().order_by('name')
+    sort_by = request.GET.get('sort_by', 'name')
+    if sort_by == 'price':
+        pizzas = Pizza.objects.all().order_by('price')
+    else:
+        pizzas = Pizza.objects.all().order_by('name')
+
     if request.method == "POST":
         data = request.POST
         action = data.get("pizzaName")
@@ -23,6 +28,7 @@ def pizza_detail(request, pizza_id):
     pizza = Pizza.objects.get(id=pizza_id)
     context = {'pizza': pizza}
     return render(request, 'pizza/pizza_detail.html', context)
+
 
 
 # Individual pizza object
