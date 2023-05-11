@@ -7,17 +7,16 @@ from pizza.models import Pizza
 
 def index(request):
   cart = request.session.get('cart', [])
-  pizzas = Pizza.objects.filter(name__in=cart)
+  pizza_names = list(set(cart))  # Get unique pizza names from the cart
+  pizzas = Pizza.objects.filter(name__in=pizza_names)
   total_price = 0
 
   for pizza in pizzas:
+    quantity = cart.count(pizza.name)  # Get the quantity of the pizza from the cart
     if pizza.name == 'Margherita':
-      pizza.price = pizza.price * 0.5
-      total_price += pizza.price
-    else:
-        total_price += pizza.price
+      pizza.price *= 0.5  # Apply discount to Margherita pizza
+    total_price += pizza.price * quantity  # Multiply price by quantity
 
-  #total_price = sum(pizza.price for pizza in pizzas)
   return render(request, 'checkout/index.html', {'pizzas': pizzas, 'total_price': total_price})
 
 #checkout history view
