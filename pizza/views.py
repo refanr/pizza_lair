@@ -6,7 +6,7 @@ from pizza.models import Pizza
 
 # All pizzas
 def index(request):#pizza_list(request):
-    sort_by = request.GET.get('sort_by', 'name')
+    sort_by = request.GET.get('sort_by', 'price')
     if sort_by == 'price':
         pizzas = Pizza.objects.all().order_by('price')
     else:
