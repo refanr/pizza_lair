@@ -5,7 +5,8 @@ from pizza.models import Pizza
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import datetime
-from .forms import PaymentForm, ContactInfoForm
+from .forms import PaymentForm, ContactInfoForm, CheckoutForm
+
 
 # ...
 
@@ -62,14 +63,26 @@ def payment_options(request):
 
     return render(request, 'checkout/payment_options.html', {'total_price': total_price})
 
+
 def get_pizza(request):
     pickup_time = datetime.datetime.now() + datetime.timedelta(minutes=15)
     return render(request, 'checkout/get_pizza.html', {'pickup_time': pickup_time})
 
 
 def info_form(request):
-    form = ContactInfoForm()
+    if request.user.is_anonymous:
+        form = ContactInfoForm()
+    else:
+        fullname = request.user.first_name + " " + request.user.last_name
+        form = ContactInfoForm({'name': fullname})
+
+    if request.method == 'POST':
+        form = CheckoutForm(data=request.POST)
+        if form.is_valid():
+            print(1)
+
     return render(request, 'checkout/info_form.html', {'form': form})
+
 
 def cc_form(request):
     form = PaymentForm()
