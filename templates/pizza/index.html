@@ -13,7 +13,7 @@
 
 <form method="get">
     <label for="sort_by">Sort by:</label>
-    <select class="select" name="sort_by" id="sort_by" onchange="this.form.submit()">
+    <select name="sort_by" id="sort_by" onchange="this.form.submit()" style="min-height: 33px;border-radius: 5px;min-width: 75px">
         <option value="name" {% if request.GET.sort_by == 'name' %}selected{% endif %}>Name</option>
         <option value="price" {% if request.GET.sort_by != 'name' %}selected{% endif %}>Price</option>
     </select>
