@@ -9,11 +9,15 @@ body {
 }
 .container h5 {
     color: rgba(0,0,0,0.4);
-    letter-spacing: 10px;
+    letter-spacing: 15px;
 }
 
 .container2 {
     background-color: rgba(1,1,1,0);
+}
+
+.container-footer {
+    text-align: center;
 }
 
 .pizza {
