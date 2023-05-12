@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2 class="text-center mt-5">Contact Information</h2>
+  <h2 class="text-center mt-5">Payment Information</h2>
   <div class="row justify-content-center mt-4">
     <div class="col-md-6">
       <form method="post" action="{% url 'get_pizza' %}">
@@ -14,15 +14,10 @@
                 </div>
             </div>
         {% endfor %}
-      </form>
         <div class="form-group text-center">
-            <a href="{% url 'get_pizza' %}">
-      <button class="btn btn-primary" style="margin-right: 20px;">Pay on arrival</button>
-    </a>
-          <a href="{% url 'cc_form' %}">
-      <button class="btn btn-primary">Pay now with Credit Card</button>
-    </a>
+          <button type="submit" class="btn btn-primary">Pay Now</button>
         </div>
+      </form>
     </div>
   </div>
 {% endblock %}

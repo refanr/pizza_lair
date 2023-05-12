@@ -5,7 +5,7 @@ from pizza.models import Pizza
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import datetime
-from .forms import PaymentForm
+from .forms import PaymentForm, ContactInfoForm
 
 # ...
 
@@ -68,8 +68,12 @@ def get_pizza(request):
 
 
 def info_form(request):
-    form = PaymentForm()
+    form = ContactInfoForm()
     return render(request, 'checkout/info_form.html', {'form': form})
+
+def cc_form(request):
+    form = PaymentForm()
+    return render(request, 'checkout/cc_form.html', {'form': form})
 
 #checkout history view
 # def checkout_history(request):
