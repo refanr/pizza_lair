@@ -1,6 +1,6 @@
 body {
     min-height: 100%;
-    background: linear-gradient(0deg, rgba(113,22,11,0.69), rgba(113,22,11,0.69)), url(https://pbs.twimg.com/media/C4uhAZ9UYAEUSJI.jpg) ;
+    background: linear-gradient(0deg, rgba(113,22,11,0.69), rgba(113,22,11,0.69)), url("../images/pizza.png") ;
     background-size: cover;
 }
 .container {
